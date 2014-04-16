@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
-#define MAX_LENGHT 10
-//从pos位置处调整大根堆
+#define MAX_LENGTH 10
+
 void print(int arr[],int length)
 {
     for(int i=0;i<length;i++)
@@ -32,7 +32,7 @@ int partition(int arr[], int low, int high)
     }
     swap(arr[low],arr[high]);
   }
-  print(arr,MAX_LENGHT);
+  print(arr,MAX_LENGTH);
   cout<<low<<" "<<high<<" "<<endl;
   return high;
 }
@@ -48,8 +48,8 @@ void quicksort(int arr[],int low,int high)
 }
 void main(int argc, char* argv[])
 {
-  int arr[MAX_LENGHT]={9,5,7,8,3,6,44,55,1,2};
-  print(arr,MAX_LENGHT);
-  quicksort(arr,0,MAX_LENGHT-1);
-  print(arr,MAX_LENGHT);
+  int arr[MAX_LENGTH]={9,5,7,8,3,6,44,55,1,2};
+  print(arr,MAX_LENGTH);
+  quicksort(arr,0,MAX_LENGTH-1);
+  print(arr,MAX_LENGTH);
 }
